@@ -1,0 +1,14 @@
+[Unit]
+Description=Storybox — offline AI storyteller for kids
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h
+ExecStart=%h/.sdkman/candidates/java/current/bin/java -Dspring.profiles.active=pi -jar %h/storybox.jar
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "name": "Pack de démarrage",
+  "axes": {
+    "HERO": [
+      {
+        "id": "chevalier",
+        "label": "Chevalier",
+        "cue": "cues/hero-chevalier.mp3"
+      },
+      {
+        "id": "princesse",
+        "label": "Princesse",
+        "cue": "cues/hero-princesse.mp3"
+      }
+    ],
+    "COMPANION": [
+      {
+        "id": "dragon",
+        "label": "Dragon",
+        "cue": "cues/comp-dragon.mp3"
+      },
+      {
+        "id": "renard",
+        "label": "Renard",
+        "cue": "cues/comp-renard.mp3"
+      }
+    ],
+    "PLACE": [
+      {
+        "id": "chateau",
+        "label": "Chateau",
+        "cue": "cues/place-chateau.mp3"
+      },
+      {
+        "id": "foret",
+        "label": "Foret",
+        "cue": "cues/place-foret.mp3"
+      }
+    ],
+    "OBJECT": [
+      {
+        "id": "epee",
+        "label": "Epée",
+        "cue": "cues/obj-epee.mp3"
+      },
+      {
+        "id": "lanterne",
+        "label": "Lanterne",
+        "cue": "cues/obj-lanterne.mp3"
+      }
+    ]
+  },
+  "stories": [
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "dragon",
+        "PLACE": "chateau",
+        "OBJECT": "epee"
+      },
+      "title": "Le chevalier, le dragon et l'epee du chateau",
+      "audio": "stories/chevalier-dragon-chateau-epee.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "dragon",
+        "PLACE": "chateau",
+        "OBJECT": "lanterne"
+      },
+      "title": "Le chevalier, le dragon et la lanterne du chateau",
+      "audio": "stories/chevalier-dragon-chateau-lanterne.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "dragon",
+        "PLACE": "foret",
+        "OBJECT": "epee"
+      },
+      "title": "Le chevalier, le dragon et l'epee de la foret",
+      "audio": "stories/chevalier-dragon-foret-epee.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "dragon",
+        "PLACE": "foret",
+        "OBJECT": "lanterne"
+      },
+      "title": "Le chevalier, le dragon et la lanterne de la foret",
+      "audio": "stories/chevalier-dragon-foret-lanterne.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "renard",
+        "PLACE": "chateau",
+        "OBJECT": "epee"
+      },
+      "title": "Le chevalier, le renard et l'epee du chateau",
+      "audio": "stories/chevalier-renard-chateau-epee.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "renard",
+        "PLACE": "chateau",
+        "OBJECT": "lanterne"
+      },
+      "title": "Le chevalier, le renard et la lanterne du chateau",
+      "audio": "stories/chevalier-renard-chateau-lanterne.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "renard",
+        "PLACE": "foret",
+        "OBJECT": "epee"
+      },
+      "title": "Le chevalier, le renard et l'epee de la foret",
+      "audio": "stories/chevalier-renard-foret-epee.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "chevalier",
+        "COMPANION": "renard",
+        "PLACE": "foret",
+        "OBJECT": "lanterne"
+      },
+      "title": "Le chevalier, le renard et la lanterne de la foret",
+      "audio": "stories/chevalier-renard-foret-lanterne.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "princesse",
+        "COMPANION": "dragon",
+        "PLACE": "chateau",
+        "OBJECT": "lanterne"
+      },
+      "title": "La princesse, le dragon et la lanterne du chateau",
+      "audio": "stories/princesse-dragon-chateau-lanterne.mp3"
+    },
+    {
+      "selection": {
+        "HERO": "princesse",
+        "COMPANION": "renard",
+        "PLACE": "foret",
+        "OBJECT": "lanterne"
+      },
+      "title": "La princesse, le renard et la lanterne de la foret",
+      "audio": "stories/princesse-renard-foret-lanterne.mp3"
+    }
+  ],
+  "fallback": {
+    "selection": {},
+    "title": "Histoire surprise",
+    "audio": "stories/fallback.mp3"
+  }
+}

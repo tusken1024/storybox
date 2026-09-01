@@ -1,0 +1,26 @@
+[project]
+name = "storybox-tts-chatterbox"
+version = "0.1.0"
+description = "Génération TTS français Storybox — moteur Chatterbox Multilingual"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "chatterbox-tts==0.1.7",
+    "setuptools==80.10.2",  # dernière version avant suppression de pkg_resources (requis par Perth/watermarking)
+    "torch==2.6.0",
+    "torchaudio==2.6.0",
+]
+
+[tool.uv]
+# uv gère la création du venv (.venv/ local à ce dossier) automatiquement
+# à la première invocation de `uv run` — pas besoin de le créer à la main.
+
+[tool.uv.sources]
+# Sans ça, uv installe torch CPU-only depuis PyPI par défaut. Adapte cu124
+# à ta version CUDA réelle (vérifiable avec `nvidia-smi`).
+torch = [{ index = "pytorch-cu124" }]
+torchaudio = [{ index = "pytorch-cu124" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true

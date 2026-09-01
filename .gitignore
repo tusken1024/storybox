@@ -1,0 +1,39 @@
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+.factorypath
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local audio files (do NOT commit user audio)
+/audio/
+!/audio/.gitkeep
+
+# Local environment overrides
+application-local.yml
+application-local.properties
+.env
+/docs/sprints/

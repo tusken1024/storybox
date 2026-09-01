@@ -1,0 +1,26 @@
+[project]
+name = "storybox-tts-kokoro"
+version = "0.1.0"
+description = "Génération TTS français Storybox — moteur Kokoro-82M"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "kokoro==0.9.4",
+    "soundfile==0.13.1",
+    "torch==2.6.0",
+]
+
+[tool.uv]
+# uv gère la création du venv (.venv/ local à ce dossier) automatiquement
+# à la première invocation de `uv run` — pas besoin de le créer à la main.
+
+[tool.uv.sources]
+# Sans ça, uv installe torch CPU-only depuis PyPI par défaut. Kokoro tourne
+# très bien en CPU (modèle léger), mais autant profiter du GPU si dispo.
+# Adapte cu124 à ta version CUDA réelle (vérifiable avec `nvidia-smi` +
+# `python3 -c "import torch; print(torch.version.cuda)"`).
+torch = [{ index = "pytorch-cu124" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
